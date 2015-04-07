@@ -262,7 +262,7 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #ffffff;
+  color: #000000;
   background-color: #484848;
 }
 input,
@@ -2833,7 +2833,7 @@ input[type="button"].btn-block {
 .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: #ffffff;
-  background-color: rgba(255, 43, 0, 1);
+  background-color: rgba(230, 43, 30, 1);
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3921,7 +3921,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: rgba(230,43,30,1);
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
@@ -3933,13 +3934,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: rgba(255, 43, 0, 1);
+  background-color: rgba(230, 43, 30, 1);
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: rgba(255, 43, 0, 1);
+  background-color: rgba(230, 43, 30, 1);
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -3964,7 +3965,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: rgba(255, 43, 0, 1);
+  background-color: rgba(230, 43, 30, 1);
   color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
@@ -3991,13 +3992,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #ffffff;
-    background-color: rgba(255, 43, 0, 1);
+    background-color: rgba(230, 43, 30, 1);
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: rgba(255, 43, 0, 1);
+    background-color: rgba(230, 43, 30, 1);
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -6166,7 +6167,7 @@ legend {
 .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: #ffffff;
-  background: rgba(255, 43, 0, 1);
+  background: rgba(230, 43, 30, 1);
 }
 .dropdown-menu .disabled > a,
 .dropdown-menu .disabled > a:hover,
@@ -6495,4 +6496,11 @@ legend {
 .cateringDay {
   float:left;
   margin-right: 20px;
+}
+
+.navbar-inverse .navbar-nav > li#currentPage{
+	background-color: rgba(230,43,30,1);
+}
+.navbar-inverse .navbar-nav > li#currentPage > a {
+	color: #ffffff;
 }

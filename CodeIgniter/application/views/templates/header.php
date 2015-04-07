@@ -32,12 +32,12 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url();?>index.php/Home">Home</a></li>
-                <li><a href="<?php echo base_url();?>index.php/Info">Informatie</a></li>
-                <li><a href="<?php echo base_url();?>index.php/Events">Events</a></li>
-                <li><a href="<?php echo base_url();?>index.php/News">Nieuws</a></li>
-                <li><a href="<?php echo base_url();?>index.php/Videos">Video's</a></li>
-                <li><a href="<?php echo base_url();?>index.php/Contact">Contact</a></li>
+                <li<?php if ($thisPage=="Home") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>index.php/Home">Home</a></li>
+                <li<?php if ($thisPage=="Info") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>index.php/Info">Informatie</a></li>
+                <li<?php if ($thisPage=="Events") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>index.php/Events">Events</a></li>
+                <li<?php if ($thisPage=="News") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>index.php/News">Nieuws</a></li>
+                <li<?php if ($thisPage=="Videos") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>index.php/Videos">Video's</a></li>
+                <li<?php if ($thisPage=="Contact") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>index.php/Contact">Contact</a></li>
                                     <li><a href="http://www.backtothelan.be/register/">Registreer</a></li>
                             </ul>
                              <form class="navbar-form navbar-right" role="form" action="http://www.backtothelan.be/login_check" method="post">

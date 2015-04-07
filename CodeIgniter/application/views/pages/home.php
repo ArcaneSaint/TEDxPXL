@@ -1,12 +1,5 @@
 <div class="container">
-            <div class="jumbotron">
-      <div class="container">
-        <div>
-          <p><img style="max-width: 100%" src="./Back to the LAN_files/website_banner.jpg"></p>
-          <p class="text-center">22-23-24 mei --- Sint-Lambrechts-Herk (Hasselt) --- 50 seats</p>
-        </div>
-      </div>
-    </div>
+<h1>Home</h1>
 <div class="col-lg-9">
   <div class="panel panel-default">
       <div class="panel-body">

@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Events extends CI_Controller {
 
 	public function index()
 	{
 		//init global vars
-		$data['thisPage'] = "Home";
+		$data['thisPage'] = "Events";
 		$this->load->vars($data);
 	
 		//load php helpers
@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 		
 		$this->load->view('templates/header');
 		//load page
-		$this->load->view('pages/home');
+		$this->load->view('pages/events');
 		$this->load->view('templates/footer');
 	}
 }
