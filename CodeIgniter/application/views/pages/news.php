@@ -1,4 +1,3 @@
-<div class="container">
 <h1>Informatie</h1>
   <div class="panel panel-default">
       <div class="panel-body">

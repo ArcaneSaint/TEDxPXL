@@ -1,14 +1,8 @@
-<div class="container">
 <h1>Informatie</h1>
   <div class="panel panel-default">
       <div class="panel-body">
         <h1 class="page-header">Under Construction</h1>
-        <p>1this webpage is currently under construction</p></div>
-  </div>
-  <div class="panel panel-default">
-      <div class="panel-body">
-        <h1 class="page-header">Under Construction</h1>
-        <p>1this webpage is currently under construction</p></div>
+        <p>this webpage is currently under construction</p></div>
   </div>
 <div class="col-lg-6">
   <div class="panel panel-default">

@@ -1,6 +1,10 @@
 <?php
 class Pages extends CI_Controller {
 
+	function __construct(){
+        parent::__construct();
+    }
+
     public function view($page = 'home')
     {
 		//$page=strtolower($page);

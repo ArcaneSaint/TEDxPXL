@@ -6503,4 +6503,5 @@ legend {
 }
 .navbar-inverse .navbar-nav > li#currentPage > a {
 	color: #ffffff;
+  text-shadow: 1px 1px 0px #1c1c1c;
 }
