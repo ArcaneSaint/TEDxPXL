@@ -16,7 +16,19 @@
 		<li <?php if ($thisPage=="News") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>News">Nieuws</a></li>
 		<li <?php if ($thisPage=="Videos") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Videos">Video's</a></li>
 		<li <?php if ($thisPage=="Contact") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Contact">Contact</a></li>
-		<li <?php if ($thisPage=="Register") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Register">Registreer</a></li>
+		<?php if (!$this->session->userdata('validated')) 
+		{
+		?>
+			<li <?php if ($thisPage=="Register") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Register">Registreer</a></li>
+				<?php
+		}
+		else
+		{
+		?>
+			<li <?php if ($thisPage=="Account") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Account">Account</a></li>
+		<?php
+		}
+		?>
 	</ul>
 					
 	<?php include 'header_login.php' ?>		

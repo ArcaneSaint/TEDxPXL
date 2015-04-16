@@ -34,6 +34,14 @@ class Register_Model extends CI_Model {
                'password' => $hash
             );
 			$this->db->insert('users', $data); 
+			$sessionData = array(
+							'id' => $row->id,
+							'email' => $row->email,
+							'firstName' => $row->firstName,
+							'lastName' => $row->lastName,
+							'validated' => true
+							);
+			$this->session->set_userdata($sessionData);
 			return TRUE;
 		}
 		

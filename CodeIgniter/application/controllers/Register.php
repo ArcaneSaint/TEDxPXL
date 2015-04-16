@@ -32,9 +32,9 @@ class Register extends CI_Controller {
 		
 		$this->form_validation->set_rules('user_registration_form[firstName]', 'First Name', 'required|max_length[30]');
 		$this->form_validation->set_rules('user_registration_form[lastName]', 'Last Name', 'required|max_length[30]');
-		$this->form_validation->set_rules('user_registration_form[plainPassword][first]', 'Password', 'required|matches[user_registration_form[plainPassword][second]]');
+		$this->form_validation->set_rules('user_registration_form[plainPassword][first]', 'Password', 'required|matches[user_registration_form[plainPassword][second]]|min_length[8]');
 		$this->form_validation->set_rules('user_registration_form[plainPassword][second]', 'Password Confirmation', 'required');
-		$this->form_validation->set_rules('user_registration_form[email]', 'Email', 'required|valid_email|min_length[5]|max_length[30]');
+		$this->form_validation->set_rules('user_registration_form[email]', 'Email', 'required|valid_email|max_length[30]');
 	
 	
 	

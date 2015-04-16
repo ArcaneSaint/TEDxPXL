@@ -21,17 +21,17 @@ class Login_model extends CI_Model {
 		{
 			$row = $query->row();
 			if(password_verify($password, $row->password)){
-				$data = array('email' => $row->email,
-							'firstName' => $row->firstName,
-							'lastName' => $row->lastName,
+				$data = array(
+							'id' => $row->id,
+							'email' => $row->email,
+							'firstName' => $row->firstname,
+							'lastName' => $row->lastname,
 							'validated' => true
 							);
 				$this->session->set_userdata($data);
 				return true;
 			}
 		}
-		
-		$this->session->set_userdata('pwd', $password);
 		return false;
 	}
 }

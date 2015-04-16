@@ -9,17 +9,7 @@ class Logout extends CI_Controller {
 
 	public function index()
 	{
-		//init global vars
-		$data['thisPage'] = "Login";
-		$this->load->vars($data);
-	
-		//load php helpers
-		$this->load->helper('url');
-		
-		$this->load->view('templates/header');
-		//load page
-		$this->load->view('pages/login');
-		$this->load->view('templates/footer');
+		redirect('home');
 	}
 	
 	public function process() {

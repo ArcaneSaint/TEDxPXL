@@ -7,10 +7,11 @@ class Login extends CI_Controller {
         parent::__construct();
     }
 
-	public function index()
+	public function index($errorMessage = NULL)
 	{
 		//init global vars
 		$data['thisPage'] = "Login";
+		$data['errorMessage'] = $errorMessage;
 		$this->load->vars($data);
 	
 		//load php helpers
@@ -23,6 +24,7 @@ class Login extends CI_Controller {
 	}
 	
 	public function process() {
+		$this->load->library('form_validation');
 		// Load the model
         $this->load->model('login_model');
         // Validate the user can login
@@ -30,11 +32,9 @@ class Login extends CI_Controller {
         // Now we verify the result
         if(! $result){
             // If user did not validate, then show them login page again
-            //$this->index();
-			redirect('events');
+			$errorMessage = 'Gebruikersnaam of wachtwoord ongeldig';
+            $this->index($errorMessage);
         }else{
-            // If user did validate, 
-            // Send them to members area
             redirect('home');
         }      
 	}

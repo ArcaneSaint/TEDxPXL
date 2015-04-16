@@ -1,13 +1,21 @@
+<h1>Login</h1>
 <div>
-	<div class="alert alert-danger alert-dismissable">
-		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-            Gebruikersnaam of wachtwoord ongeldig
-	</div>
+	<?php 
+	if(!empty($errorMessage))
+	{
+	?>
+		<div class="alert alert-danger alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+				<?php echo $errorMessage; ?>
+		</div>
+	<?php
+	}
+	?>
 
-	<form action="/login_check" method="post" role="form">
+	<form action="<?php echo base_url(); ?>Login/process" method="post" role="form">
 		<div class="form-group">
-			<label for="username">Gebruikersnaam:</label>
-			<input class="form-control" type="text" id="username" name="_username" value="ttttt" required="required" />
+			<label for="username">Email:</label>
+			<input class="form-control" type="text" id="email" name="_email" value="<?php echo set_value('_email'); ?>" required="required" />
 		</div>
 
 		<div class="form-group">
