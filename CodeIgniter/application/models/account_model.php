@@ -48,12 +48,12 @@ class Account_Model extends CI_Model {
 		if(!empty($firstName)) 
 		{
 			//update firstName
-			$data['firstName'] = $firstName;
+			$data['firstname'] = $firstName;
 		}
 		if(!empty($lastName)) 
 		{
 			//update lastName
-			$data['lastName'] = $lastName;
+			$data['lastname'] = $lastName;
 		}
 		
 		if(!empty($data)) 
@@ -68,6 +68,7 @@ class Account_Model extends CI_Model {
 							'email' => $email,
 							'firstName' => $firstname,
 							'lastName' => $lastname,
+							'role' => $this->session->userdata('role'),
 							'validated' => true
 							);
 			$this->session->set_userdata($sessionData);

@@ -27,6 +27,10 @@
 		?>
 			<li <?php if ($thisPage=="Account") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Account">Account</a></li>
 		<?php
+			if($this->session->userdata('role')==1){ ?>
+			<li <?php if ($thisPage=="Admin") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Admin">Admin</a></li>
+			<?php
+			}
 		}
 		?>
 	</ul>

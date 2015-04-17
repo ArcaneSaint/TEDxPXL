@@ -31,7 +31,8 @@ class Register_Model extends CI_Model {
                'email' => $email,
                'firstname' => $firstName,
                'lastname' => $lastName,
-               'password' => $hash
+               'password' => $hash,
+			   'role' => 'user'
             );
 			$this->db->insert('users', $data); 
 			$sessionData = array(
@@ -39,6 +40,7 @@ class Register_Model extends CI_Model {
 							'email' => $row->email,
 							'firstName' => $row->firstName,
 							'lastName' => $row->lastName,
+							'role' => $row->role,
 							'validated' => true
 							);
 			$this->session->set_userdata($sessionData);
