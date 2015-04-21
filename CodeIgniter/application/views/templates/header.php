@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>TEDxPXL</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>resources/css/style.css" />
-		<link rel="shortcut icon" type="image/x-icon" href="http://www.backtothelan.be/favicon.png" />
+		<!--<link rel="shortcut icon" type="image/x-icon" href="http://www.backtothelan.be/favicon.png" />-->
 		<style type="text/css"></style>
 	</head>
 	<body>

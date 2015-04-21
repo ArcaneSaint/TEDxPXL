@@ -7,9 +7,10 @@ class Logout_model extends CI_Model {
     }
 	
 	public function validate(){
-		$data = array(
+		$this->session->sess_destroy();
+		/*$data = array(
 			'validated' => false
 		);
-		$this->session->set_userdata($data);
+		$this->session->set_userdata($data);*/
 	}
 }

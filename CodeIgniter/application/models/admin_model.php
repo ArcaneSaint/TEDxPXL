@@ -8,7 +8,7 @@ class Admin_Model extends CI_Model {
 
 	public function getUser($id)
 	{
-		$this->db->select('id, email, firstname, lastname, role')->from('users')->where('id',$id);
+		$this->db->select('users.id, email, firstname, lastname, userroles.role')->from('users')->where('users.id',$id)->join('userroles', 'userroles.id = users.role');
 		$query = $this->db->get();
 		
 		return $query->row();
@@ -16,7 +16,7 @@ class Admin_Model extends CI_Model {
 	
 	public function getUsers()
 	{
-		$this->db->select('id, email, firstname, lastname, role')->from('users');
+		$this->db->select('users.id, email, firstname, lastname, userroles.role')->from('users')->join('userroles', 'userroles.id = users.role');
 		$query = $this->db->get();
 		
 		return $query->result_array();
@@ -24,10 +24,21 @@ class Admin_Model extends CI_Model {
 	}
 	public function getRoles()
 	{
-		$this->db->select('id, name')->from('userroles');
+		$this->db->select('id, role')->from('userroles');
 		$query = $this->db->get();
 		
 		return $query->result_array();
+	}
+	
+	public function resetPassword(){
+		$id = $this->security->xss_clean($this->input->post('user_account_update[id]'));
+		
+		$password=password_hash('password',PASSWORD_DEFAULT);
+		if(!empty($data)) 
+		{
+			//update database
+			$this->db->where('id', $id)->update('users', array('password'=>$password));
+		}
 	}
 	
 	public function update(){

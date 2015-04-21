@@ -1,8 +1,9 @@
-<h1>Inschrijven</h1>
+<h1>Registreren</h1>
 <div class="panel panel-default">
 	<div class="panel-body">
 		<form action="<?php echo base_url(); ?>Register/process" method="POST" class="user_registration_register">
 			<?php echo validation_errors(); ?>
+			<?php echo $errorMessage; ?>
 			<div id="user_registration_form">
 				<div class="form-group">
 					<label for="user_registration_form_email" class="required">E-mail:</label>

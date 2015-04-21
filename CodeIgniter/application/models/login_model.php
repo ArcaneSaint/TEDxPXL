@@ -12,14 +12,17 @@ class Login_model extends CI_Model {
 		$password = $this->security->xss_clean($this->input->post('_password'));
 		//$hash = password_hash($password, PASSWORD_DEFAULT);
 		
-		$this->db->where('email', $email);
+		$this->db->select('users.id, password, email, firstname, lastname, userroles.role')->from('users')->where('email', $email)->join('userroles', 'userroles.id = users.role');
 		//$this->db->where('password', $password);
 		
-		$query = $this->db->get('users');
+		$query = $this->db->get();
 		
 		if ($query->num_rows() > 0)
 		{
 			$row = $query->row();
+			/*$this->db->select('role')->from('userroles')->where('id',$row->role);
+			$roles = $this->db->get();*/
+		
 			if(password_verify($password, $row->password)){
 				$data = array(
 							'id' => $row->id,

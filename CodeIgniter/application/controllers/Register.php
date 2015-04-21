@@ -7,11 +7,12 @@ class Register extends CI_Controller {
         parent::__construct();
     }
 
-	public function index()
+	public function index($errorMessage = null)
 	{
 		$this->load->library('form_validation');
 		//init global vars
 		$data['thisPage'] = "Register";
+		$data['errorMessage'] = $errorMessage;
 		
 		$this->load->vars($data);
 	
@@ -48,7 +49,7 @@ class Register extends CI_Controller {
 			// Now we verify the result
 			if(! $result){
 				// If registration failed, show them registration page again
-				$this->index();
+				$this->index('Registration failed.');
 			}else{
 				// If registration succeeded
 				// Send them to members area

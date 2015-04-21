@@ -1,6 +1,6 @@
 
     <blockquote class="blockquote-reverse pull-right">
-        <p>&copy Audric, Chris, Jeroen, Robby, Thibaut</p>
+        <p>&copy Audric, Jeroen, Thibaut</p>
         <small class="small">Een project van <a target="_blank" href="http://www.pxl.be/">hogeschool PXL</a></small>
     </blockquote>
 </div>

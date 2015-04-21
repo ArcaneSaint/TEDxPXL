@@ -41,11 +41,12 @@
 						<label for="user_account_update_role" class="required">Role</label>
 						<select id="user_account_update_role" name="user_account_update[role]">
 							<?php foreach($roles as $role): ?>
-								<option value="<?php echo $role['id'];?>"<?php if($role['id']==$user->role){echo ' selected="selected"';}?>><?php echo $role['name'];?></option>
+								<option value="<?php echo $role['id'];?>"<?php if($role['role']==$user->role){echo ' selected="selected"';}?>><?php echo $role['role'];?></option>
 							<?php endforeach; ?>
 						</select>
 					</div>
-					<button class="btn btn-success">Save</button>
+					<button type="submit" name="user_account_update[save]" class="btn btn-success">Save</button>
+					<button type="submit" name="user_account_update[passwordReset]" class="btn btn-success">Reset password</button>
 				</form>
 			
 			<?php } ?>

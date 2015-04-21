@@ -1,0 +1,2 @@
+Copy contents of CodeIgniter folder to xampp/htdocs/TEDxPXL/
+Copy contents of Mysql folder to xampp/mysql/data/
