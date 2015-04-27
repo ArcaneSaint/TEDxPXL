@@ -11,11 +11,8 @@
 				<div class="navbar-collapse collapse">
 	<ul class="nav navbar-nav">
 		<li <?php if ($thisPage=="Home") echo " id=\"currentPage\""; ?> ><a href=" <?php echo base_url();?>Home">Home</a></li>
-		<li <?php if ($thisPage=="Info") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Info">Informatie</a></li>
 		<li <?php if ($thisPage=="Events") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Events">Events</a></li>
-		<li <?php if ($thisPage=="News") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>News">Nieuws</a></li>
-		<li <?php if ($thisPage=="Videos") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Videos">Video's</a></li>
-		<li <?php if ($thisPage=="Contact") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Contact">Contact</a></li>
+		<li <?php if ($thisPage=="Forum") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>News">Forum</a></li>
 		<?php if (!$this->session->userdata('validated')) 
 		{
 		?>
