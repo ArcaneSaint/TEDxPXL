@@ -47,7 +47,7 @@ class Register extends CI_Controller {
 		} else{
 			$result = $this->register_model->validate();
 			// Now we verify the result
-			if(! $result){
+			if(!$result){
 				// If registration failed, show them registration page again
 				$this->index('Registration failed.');
 			}else{
