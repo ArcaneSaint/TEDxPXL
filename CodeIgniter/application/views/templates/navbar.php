@@ -12,7 +12,7 @@
 	<ul class="nav navbar-nav">
 		<li <?php if ($thisPage=="Home") echo " id=\"currentPage\""; ?> ><a href=" <?php echo base_url();?>Home">Home</a></li>
 		<li <?php if ($thisPage=="Events") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Events">Events</a></li>
-		<li <?php if ($thisPage=="Forum") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>News">Forum</a></li>
+		<li <?php if ($thisPage=="Forum") echo " id=\"currentPage\""; ?>><a href="<?php echo base_url();?>Forum">Forum</a></li>
 		<?php if (!$this->session->userdata('validated')) 
 		{
 		?>
@@ -30,6 +30,12 @@
 			}
 		}
 		?>
+		<li>
+			<form class="navbar-form" action=" <?php echo base_url(); ?>search" method="post">
+				<input type="text" name="searchText" placeholder="Search"></input>
+				<button type="submit">Go</button>
+			</form>
+		</li>
 	</ul>
 					
 	<?php include 'header_login.php' ?>		

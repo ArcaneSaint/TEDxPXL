@@ -10,7 +10,10 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		//init global vars
+        $this->load->model('account_model');
+		
 		$data['thisPage'] = "Home";
+		$data['newest'] = $result = $this->account_model->getNewest();
 		$this->load->vars($data);
 	
 		//load php helpers

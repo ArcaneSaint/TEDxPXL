@@ -28,7 +28,7 @@ class Admin extends CI_Controller {
 			$data['thisPage'] = "Admin";
 			
 			$users = $this->admin_model->getUsers(0,10);
-			$events = $this->event_model->getEvents(0,10);
+			$events = $this->event_model->getTruncEvents(0,10);
 			$roles = $this->admin_model->getRoles();
 			
 			/*foreach($users as &$user){

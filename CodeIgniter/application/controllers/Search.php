@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Events extends CI_Controller {
+class Search extends CI_Controller {
 
 	function __construct(){
         parent::__construct();
@@ -10,20 +10,29 @@ class Events extends CI_Controller {
 	public function index()
 	{
 		//init global vars
-		$data['thisPage'] = "Events";
+		$data['thisPage'] = "Search";
 		
+		$searchString=$this->input->post('searchText');
+		
+		$this->load->model('post_model');
 		$this->load->model('event_model');
-		$events = $this->event_model->getEvents(0,10);
-		$data['events'] = $events;
+		$data['events']=$this->event_model->findEvents($searchString);
+		$data['posts']=$this->post_model->findPosts($searchString);
 		
 		$this->load->vars($data);
+		
 	
 		//load php helpers
 		$this->load->helper('url');
 		
 		$this->load->view('templates/header');
 		//load page
-		$this->load->view('pages/events');
+		$this->load->view('pages/search');
 		$this->load->view('templates/footer');
+	}
+	
+	public function process()
+	{
+		$this->load->model('search_model');
 	}
 }

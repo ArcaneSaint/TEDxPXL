@@ -12,8 +12,24 @@ class Event_Model extends CI_Model {
 		$query = $this->db->get();
 		return $query->row();
 	}
-
+	
+	public function findEvents($match)
+	{
+		$this->db->select('id, name,description,location')->from('events')->like('description', $match)->or_like('name', $match)->or_like('location', $match);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+	
 	public function getEvents($number,$offset)
+	{
+		$this->db->select('id, name, description, image, date, location')->from('events');
+		$this->db->limit($offset,$number);
+		$query = $this->db->get();
+		
+		return $query->result_array();
+	}
+	
+	public function getTruncEvents($number,$offset)
 	{
 		$this->db->select('id, name, location, date')->from('events');
 		$this->db->limit($offset,$number);

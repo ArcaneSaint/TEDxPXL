@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>TEDxPXL</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>resources/css/style.css" />
-		<!--<link rel="shortcut icon" type="image/x-icon" href="http://www.backtothelan.be/favicon.png" />-->
+		<script type="text/javascript" src="<?php echo base_url();?>resources/js/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>resources/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>resources/js/tedxpxl.js"></script>
 		<style type="text/css"></style>
 	</head>
 	<body>
@@ -15,4 +17,4 @@
 			include 'navbar.php';
 		?>
 	<div class="container">
-	<!-- Actual site content begins here  -->
+	<!-- Actual site content begins here-->

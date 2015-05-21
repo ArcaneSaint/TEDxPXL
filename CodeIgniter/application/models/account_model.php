@@ -29,6 +29,12 @@ class Account_Model extends CI_Model {
 		return FALSE;
 	}
 	
+	public function getNewest(){
+		$this->db->select('users.id, email, firstname, lastname')->from('users')->order_by('users.id','desc')->limit(1);
+		$query = $this->db->get();
+		
+		return $query->row();
+	}
 	public function validate(){
 		
 		$id = $this->session->userdata('id');

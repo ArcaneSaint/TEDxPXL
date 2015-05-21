@@ -40,10 +40,10 @@ class Register_Model extends CI_Model {
 				   'password' => $hash,
 				   'role' => $role->id
 				);
-				$newUser = $this->db->insert('users', $data);
+				$this->db->insert('users', $data);
 				
 				$sessionData = array(
-								'id' => $newUser->id,
+								'id' => $this->db->insert_id(),
 								'email' => $data['email'],
 								'firstname' => $data['firstname'],
 								'lastname' => $data['lastname'],
